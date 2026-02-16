@@ -1,0 +1,364 @@
+{
+  "info": {
+    "_postman_id": "restful-apis-collection",
+    "name": "RESTful APIs Collection",
+    "description": "Complete Postman collection for all 6 assignment APIs running locally",
+    "schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json"
+  },
+  "item": [
+    {
+      "name": "Question 1 - Library API",
+      "item": [
+        {
+          "name": "Get All Books",
+          "request": {
+            "method": "GET",
+            "header": [],
+            "url": {
+              "raw": "http://localhost:8081/api/books",
+              "protocol": "http",
+              "host": ["localhost"],
+              "port": "8081",
+              "path": ["api", "books"]
+            },
+            "description": "Get list of all books"
+          }
+        },
+        {
+          "name": "Get Book by ID",
+          "request": {
+            "method": "GET",
+            "header": [],
+            "url": {
+              "raw": "http://localhost:8081/api/books/1",
+              "protocol": "http",
+              "host": ["localhost"],
+              "port": "8081",
+              "path": ["api", "books", "1"]
+            },
+            "description": "Get a book by its ID"
+          }
+        },
+        {
+          "name": "Add New Book",
+          "request": {
+            "method": "POST",
+            "header": [
+              {
+                "key": "Content-Type",
+                "value": "application/json"
+              }
+            ],
+            "body": {
+              "mode": "raw",
+              "raw": "{\n  \"title\": \"The Great Gatsby\",\n  \"author\": \"F. Scott Fitzgerald\",\n  \"isbn\": \"978-0743273565\",\n  \"publicationYear\": 1925\n}"
+            },
+            "url": {
+              "raw": "http://localhost:8081/api/books",
+              "protocol": "http",
+              "host": ["localhost"],
+              "port": "8081",
+              "path": ["api", "books"]
+            },
+            "description": "Add a new book"
+          }
+        }
+      ]
+    },
+    {
+      "name": "Question 2 - Student API",
+      "item": [
+        {
+          "name": "Get All Students",
+          "request": {
+            "method": "GET",
+            "header": [],
+            "url": {
+              "raw": "http://localhost:8082/api/students",
+              "protocol": "http",
+              "host": ["localhost"],
+              "port": "8082",
+              "path": ["api", "students"]
+            },
+            "description": "Get list of all students"
+          }
+        },
+        {
+          "name": "Get Student by ID",
+          "request": {
+            "method": "GET",
+            "header": [],
+            "url": {
+              "raw": "http://localhost:8082/api/students/1",
+              "protocol": "http",
+              "host": ["localhost"],
+              "port": "8082",
+              "path": ["api", "students", "1"]
+            },
+            "description": "Get a student by their ID"
+          }
+        },
+        {
+          "name": "Add New Student",
+          "request": {
+            "method": "POST",
+            "header": [
+              {
+                "key": "Content-Type",
+                "value": "application/json"
+              }
+            ],
+            "body": {
+              "mode": "raw",
+              "raw": "{\n  \"firstName\": \"John\",\n  \"lastName\": \"Doe\",\n  \"email\": \"john@example.com\",\n  \"major\": \"Computer Science\",\n  \"gpa\": 3.8\n}"
+            },
+            "url": {
+              "raw": "http://localhost:8082/api/students",
+              "protocol": "http",
+              "host": ["localhost"],
+              "port": "8082",
+              "path": ["api", "students"]
+            },
+            "description": "Add a new student (returns 201 Created)"
+          }
+        }
+      ]
+    },
+    {
+      "name": "Question 3 - Restaurant API",
+      "item": [
+        {
+          "name": "Get All Menu Items",
+          "request": {
+            "method": "GET",
+            "header": [],
+            "url": {
+              "raw": "http://localhost:8083/api/menu",
+              "protocol": "http",
+              "host": ["localhost"],
+              "port": "8083",
+              "path": ["api", "menu"]
+            },
+            "description": "Get all menu items"
+          }
+        },
+        {
+          "name": "Get Menu Item by ID",
+          "request": {
+            "method": "GET",
+            "header": [],
+            "url": {
+              "raw": "http://localhost:8083/api/menu/1",
+              "protocol": "http",
+              "host": ["localhost"],
+              "port": "8083",
+              "path": ["api", "menu", "1"]
+            },
+            "description": "Get a menu item by ID"
+          }
+        },
+        {
+          "name": "Add Menu Item",
+          "request": {
+            "method": "POST",
+            "header": [
+              {
+                "key": "Content-Type",
+                "value": "application/json"
+              }
+            ],
+            "body": {
+              "mode": "raw",
+              "raw": "{\n  \"name\": \"Grilled Chicken\",\n  \"description\": \"Delicious grilled chicken breast\",\n  \"price\": 12.99,\n  \"category\": \"Main Course\"\n}"
+            },
+            "url": {
+              "raw": "http://localhost:8083/api/menu",
+              "protocol": "http",
+              "host": ["localhost"],
+              "port": "8083",
+              "path": ["api", "menu"]
+            },
+            "description": "Add a new menu item"
+          }
+        }
+      ]
+    },
+    {
+      "name": "Question 4 - E-Commerce API",
+      "item": [
+        {
+          "name": "Get All Products",
+          "request": {
+            "method": "GET",
+            "header": [],
+            "url": {
+              "raw": "http://localhost:8084/api/products",
+              "protocol": "http",
+              "host": ["localhost"],
+              "port": "8084",
+              "path": ["api", "products"]
+            },
+            "description": "Get all products"
+          }
+        },
+        {
+          "name": "Get Product by ID",
+          "request": {
+            "method": "GET",
+            "header": [],
+            "url": {
+              "raw": "http://localhost:8084/api/products/1",
+              "protocol": "http",
+              "host": ["localhost"],
+              "port": "8084",
+              "path": ["api", "products", "1"]
+            },
+            "description": "Get a product by ID"
+          }
+        },
+        {
+          "name": "Add Product",
+          "request": {
+            "method": "POST",
+            "header": [
+              {
+                "key": "Content-Type",
+                "value": "application/json"
+              }
+            ],
+            "body": {
+              "mode": "raw",
+              "raw": "{\n  \"name\": \"Wireless Mouse\",\n  \"description\": \"Ergonomic wireless mouse\",\n  \"price\": 29.99,\n  \"stock\": 50\n}"
+            },
+            "url": {
+              "raw": "http://localhost:8084/api/products",
+              "protocol": "http",
+              "host": ["localhost"],
+              "port": "8084",
+              "path": ["api", "products"]
+            },
+            "description": "Add a new product (returns 201 Created)"
+          }
+        }
+      ]
+    },
+    {
+      "name": "Question 5 - Task Management API",
+      "item": [
+        {
+          "name": "Get All Tasks",
+          "request": {
+            "method": "GET",
+            "header": [],
+            "url": {
+              "raw": "http://localhost:8085/api/tasks",
+              "protocol": "http",
+              "host": ["localhost"],
+              "port": "8085",
+              "path": ["api", "tasks"]
+            },
+            "description": "Get all tasks"
+          }
+        },
+        {
+          "name": "Get Task by ID",
+          "request": {
+            "method": "GET",
+            "header": [],
+            "url": {
+              "raw": "http://localhost:8085/api/tasks/1",
+              "protocol": "http",
+              "host": ["localhost"],
+              "port": "8085",
+              "path": ["api", "tasks", "1"]
+            },
+            "description": "Get a task by ID"
+          }
+        },
+        {
+          "name": "Create Task",
+          "request": {
+            "method": "POST",
+            "header": [
+              {
+                "key": "Content-Type",
+                "value": "application/json"
+              }
+            ],
+            "body": {
+              "mode": "raw",
+              "raw": "{\n  \"title\": \"Complete project\",\n  \"description\": \"Finish the RestFul API assignment\",\n  \"status\": \"In Progress\",\n  \"priority\": \"High\"\n}"
+            },
+            "url": {
+              "raw": "http://localhost:8085/api/tasks",
+              "protocol": "http",
+              "host": ["localhost"],
+              "port": "8085",
+              "path": ["api", "tasks"]
+            },
+            "description": "Create a new task (returns 201 Created)"
+          }
+        }
+      ]
+    },
+    {
+      "name": "Question 6 - User Profile API",
+      "item": [
+        {
+          "name": "Get All User Profiles",
+          "request": {
+            "method": "GET",
+            "header": [],
+            "url": {
+              "raw": "http://localhost:8086/api/user-profiles",
+              "protocol": "http",
+              "host": ["localhost"],
+              "port": "8086",
+              "path": ["api", "user-profiles"]
+            },
+            "description": "Get all user profiles"
+          }
+        },
+        {
+          "name": "Get User Profile by ID",
+          "request": {
+            "method": "GET",
+            "header": [],
+            "url": {
+              "raw": "http://localhost:8086/api/user-profiles/1",
+              "protocol": "http",
+              "host": ["localhost"],
+              "port": "8086",
+              "path": ["api", "user-profiles", "1"]
+            },
+            "description": "Get a user profile by ID"
+          }
+        },
+        {
+          "name": "Create User Profile",
+          "request": {
+            "method": "POST",
+            "header": [
+              {
+                "key": "Content-Type",
+                "value": "application/json"
+              }
+            ],
+            "body": {
+              "mode": "raw",
+              "raw": "{\n  \"firstName\": \"Alice\",\n  \"lastName\": \"Smith\",\n  \"email\": \"alice@example.com\",\n  \"phone\": \"123-456-7890\",\n  \"bio\": \"Software developer\"\n}"
+            },
+            "url": {
+              "raw": "http://localhost:8086/api/user-profiles",
+              "protocol": "http",
+              "host": ["localhost"],
+              "port": "8086",
+              "path": ["api", "user-profiles"]
+            },
+            "description": "Create a new user profile (returns 201 Created)"
+          }
+        }
+      ]
+    }
+  ]
+}
